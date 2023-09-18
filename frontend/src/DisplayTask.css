@@ -1,0 +1,9 @@
+#pending-task{
+    background-color: red;
+    margin: 2px;
+}
+
+#completed-task{
+    background-color: chartreuse;
+    margin: 2px;
+}
