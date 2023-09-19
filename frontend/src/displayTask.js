@@ -7,30 +7,28 @@ function DisplayTasks(props){
     }
 
     return(
-        <div className="container">
-            <div className="row">
+        <div className="task-container">
+            <div className="task">
+                <p id="task-data">Description</p>
+                <p id="task-data">Status</p>
+                <p id="task-data">Mark</p>
+            </div>
             {props.tasks.map((
                 item => {
                     return(
-                        <div className="row" id={item.done ? "completed-task" : "pending-task"}>
-                            <div className="col">
-                            <p>{item.description}</p>
-                            </div>
-                            <div className="col">
-                            {item.done ? <p>Done</p> :
-                                <p>Pending</p> 
-                            }
-                            </div>
-                            <div className="col">
-                            {item.done ?  <></>:
-                            <button type="button" className = "col-4 btn btn-secondary" onClick={() => markTaskDone(props.tasks.indexOf(item))}>Mark Done</button>
-                            }
-                            </div>
+                        <div className = "task" id={item.done ? "completed-task" : "pending-task"}>
+                                <p id="task-data">{item.description}</p>
+                                {item.done ? <p id="task-data">Done</p> :
+                                    <p id="task-data">Pending</p> 
+                                }
+                                {item.done ?  <p id="task-data">Marked</p>:
+                                <button type="button" id="task-data" className = "btn btn-secondary" onClick={() => markTaskDone(props.tasks.indexOf(item))}>Mark</button>
+                                }
                         </div>
                     )
                 }
             ))}
-            </div>
+            
         </div>
     )
 }

@@ -1,9 +1,34 @@
 #pending-task{
     background-color: red;
-    margin: 2px;
 }
 
 #completed-task{
     background-color: chartreuse;
-    margin: 2px;
+}
+
+.task-container{
+    display: flex;
+    border: 2px solid black;
+    margin: 12px;
+    width: 100vh;
+    height: auto 90vh;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    flex-direction: column;
+}
+
+.task{
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+}
+
+#task-data{
+    width: 80%;
+    height: 100%;
+    margin: 10px;
 }
