@@ -8,7 +8,9 @@ function EventCreater(props){
         if(task.description != ""){
             props.addTask(task);
             setTask({description : "", done : false});
+            return;
         }
+        alert("No null entry allowed!")
     }
 
     return(
